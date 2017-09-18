@@ -1,0 +1,12 @@
+halo:
+  api_key:
+  api_secret_key:
+  policy_id:
+filename: strut_report
+csv_columns: [
+  agent_id: agent_id,
+  hostname: hostname,
+  strut_package: strut_package,
+  strut_version: strut_version,
+  file_path: file_path
+]
