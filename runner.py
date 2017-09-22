@@ -37,8 +37,7 @@ class StrutReport():
         for srv_id, url in self.get_finding_url():
             findings = self.halo.finding_details(url)
             result = self.utility.find_strut(findings)
-            if result["strut_package"]:
-                self.gather_data(srv_id, result)
+            self.gather_data(srv_id, result)
 
 def main():
     sys.stdout = lib.Logger(logging.info)

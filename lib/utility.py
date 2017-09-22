@@ -37,11 +37,13 @@ class Utility(object):
         for f in findings["findings"]:
             if "struts" in f["file"]:
                 return self.compare_strut_version(f["file"])
+        return None
 
     def structure_report(self, srv_info, result):
         data = {
             self.col["agent_id"]: srv_info["id"],
             self.col["hostname"]: srv_info["hostname"],
+            self.col["vulnerable"]: result["strut_package"]
         }
         data.update(result)
         return data

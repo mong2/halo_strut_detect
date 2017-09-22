@@ -15,7 +15,7 @@ class CsvWriter(object):
         with open("reports/%s.csv" % (self.filename), "wb") as f:
             writer = csv.DictWriter(f, order)
             writer.writeheader()
-            writer.writerows(data)
+            writer.writerow(data)
 
     def append_dict(self, order, data):
         with open("reports/%s.csv" % (self.filename), "a") as f:

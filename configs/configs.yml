@@ -8,5 +8,6 @@ csv_columns: [
   hostname: hostname,
   strut_package: strut_package,
   strut_version: strut_version,
-  file_path: file_path
+  file_path: file_path,
+  vulnerable: vulnerable
 ]
