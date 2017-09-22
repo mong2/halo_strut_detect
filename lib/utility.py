@@ -23,13 +23,13 @@ class Utility(object):
 
         result["file_path"] = filepath
         result["strut_version"] = version
-        result["strut_package"] = False
+        result["vulnerable"] = False
 
         if '2.0.1' <= version <= '2.3.33':
-            result["strut_package"] = True
+            result["vulnerable"] = True
             return result
         elif '2.5' <= version <= '2.5.10':
-            result["strut_package"] = True
+            result["vulnerable"] = True
             return result
         return result
 
@@ -43,7 +43,6 @@ class Utility(object):
         data = {
             self.col["agent_id"]: srv_info["id"],
             self.col["hostname"]: srv_info["hostname"],
-            self.col["vulnerable"]: result["strut_package"]
         }
         data.update(result)
         return data

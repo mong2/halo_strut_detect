@@ -6,7 +6,6 @@ filename: strut_report
 csv_columns: [
   agent_id: agent_id,
   hostname: hostname,
-  strut_package: strut_package,
   strut_version: strut_version,
   file_path: file_path,
   vulnerable: vulnerable
